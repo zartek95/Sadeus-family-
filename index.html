@@ -1,163 +1,154 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<title>Sadeus Family</title>
-<style>
-  body {
-    margin: 0;
-    font-family: 'Arial Black', sans-serif;
-    background: url('https://i.imgur.com/tonimage.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: #FFD700;
-    line-height: 1.5;
-    overflow: hidden;
-  }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sadeus Family - Officiel</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000000; /* Fond noir pur */
+            color: #ffffff;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
 
-  .content {
-    position: relative;
-    z-index: 1;
-    padding: 40px;
-  }
+        .container {
+            width: 90%;
+            max-width: 500px;
+            padding: 30px 10px;
+            text-align: center;
+        }
 
-  h1 {
-    font-size: 4em;
-    text-align: center;
-    margin-bottom: 10px;
-    animation: glow 2s infinite alternate;
-  }
+        h1 {
+            color: #FFD700; /* Or */
+            font-size: 1.8em;
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+            margin-bottom: 25px;
+            line-height: 1.3;
+        }
 
-  h2 {
-    font-size: 2em;
-    margin-top: 30px;
-    border-bottom: 1px solid #FFD700;
-    display: inline-block;
-    padding-bottom: 5px;
-  }
+        .intro {
+            font-style: italic;
+            color: #cccccc;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
 
-  p, li { color: white; font-size: 1.1em; }
+        h2 {
+            color: #FFD700;
+            font-size: 1.4em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 2px solid #FFD700;
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
 
-  ul { list-style: none; padding-left: 0; }
-  li { margin: 5px 0; }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
 
-  @keyframes glow {
-    from { text-shadow: 0 0 10px #FFD700; }
-    to { text-shadow: 0 0 30px #FFEA00, 0 0 50px #FFD700; }
-  }
+        li {
+            padding: 8px 0;
+            border-bottom: 1px solid #222;
+            font-size: 1.1em;
+        }
 
-  .divider { text-align: center; color: #FFD700; margin: 30px 0; }
+        .highlight {
+            color: #FFD700;
+            font-weight: bold;
+        }
 
-  .whatsapp-btn {
-    display: inline-block;
-    padding: 15px 30px;
-    font-size: 1.2em;
-    background: #25D366;
-    color: white;
-    text-decoration: none;
-    border-radius: 10px;
-    font-weight: bold;
-    transition: transform 0.2s;
-    margin-top: 30px;
-  }
+        .whatsapp-btn {
+            display: inline-block;
+            background-color: #25D366;
+            color: white;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-top: 40px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            transition: transform 0.2s ease;
+        }
 
-  .whatsapp-btn:hover { transform: scale(1.1); }
+        .whatsapp-btn:active {
+            transform: scale(0.95);
+        }
 
-  .button-container, .signature { text-align: center; margin-top: 20px; }
-  .signature p { font-size: 1.1em; color: #FFD700; margin-top: 10px; }
+        .footer {
+            margin-top: 50px;
+            padding-bottom: 30px;
+            color: #FFD700;
+            font-size: 0.9em;
+            letter-spacing: 1px;
+        }
 
-  /* Serpent fluide sur les bords */
-  .snake {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  .snake div {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border: 4px solid #00FF00;
-    border-radius: 50%;
-    animation: moveSnake 6s linear infinite;
-  }
-
-  .snake div:nth-child(1) { top: 0; left: 0; animation-delay: 0s; }
-  .snake div:nth-child(2) { top: 0; left: 100%; animation-delay: 2s; }
-  .snake div:nth-child(3) { top: 100%; left: 0; animation-delay: 4s; }
-
-  @keyframes moveSnake {
-    0% { transform: translate(0,0); }
-    25% { transform: translate(100vw,0); }
-    50% { transform: translate(100vw,100vh); }
-    75% { transform: translate(0,100vh); }
-    100% { transform: translate(0,0); }
-  }
-
-</style>
+        .divider {
+            color: #444;
+            margin: 20px 0;
+        }
+    </style>
 </head>
 <body>
 
-<div class="content">
-<h1>◈ 𓆙 𝘽𝙞𝙚𝙣𝙫𝙚𝙣𝙪𝙚 au cœur de la famille Sadeus ☘️</h1>
+    <div class="container">
+        <h1>◈ 𓆙 𝘽𝙞𝙚𝙣𝙫𝙚𝙣𝙪𝙚 <br>au cœur de la famille Sadeus ☘️</h1>
 
-<p>◈ 𝗡𝗼𝘂𝘀 𝗻𝗲 𝗰𝗼𝗻𝗻𝗮𝗶𝘀𝘀𝗼𝗻𝘀 pas l'impossible car ceux qu'ils appellent impossible est possible chez les Sadeus.</p>
+        <div class="intro">
+            ◈ 𝗡𝗼𝘂𝘀 𝗻𝗲 𝗰𝗼𝗻𝗻𝗮𝗶𝘀𝘀𝗼𝗻𝘀 pas l'impossible car ce qu'ils appellent impossible est possible chez les Sadeus.
+        </div>
 
-<p>◈ 𝗟𝗮 𝗽𝘂𝗿𝗴𝗲 nous appartient. Nous vivons que pour la domination, nous distribuons l'humiliation à ceux qui osent nous défier. Nous ne connaissons pas ce mot qu'ils appellent "défaite". Notre ascension est sans échelle, seules les étoiles sont nos collègues. Nous n'avons pas de rivale car la perfection n'a pas de rivale.</p>
+        <h2>CLAN DOMINER</h2>
+        <ul>
+            <li>1. <span class="highlight">𝑺𝑶𝑴𝑨</span></li>
+            <li>2. <span class="highlight">𝑵𝑨𝑹𝑨</span></li>
+            <li>3. <span class="highlight">𝑴𝑷𝑲</span></li>
+            <li>4. <span class="highlight">𝑺𝑯𝑰𝑵𝑱𝑰</span></li>
+            <li>5. <span class="highlight">𝑺𝑯𝑨𝑫𝑶𝑾</span></li>
+            <li>6. <span class="highlight">𝑻𝑴𝑷</span></li>
+            <li>7. <span class="highlight">𝑮𝑯𝑶𝑺𝑻</span></li>
+            <li>8. <span class="highlight">𝑴𝑬𝑫𝑼𝒁𝑨</span></li>
+            <li>9. <span class="highlight">𝑫𝑨𝑹𝑲 𝑹𝑬𝑰𝑮𝑵</span></li>
+            <li>10. <span class="highlight">𝑱𝑼𝑮𝑬𝑴𝑬𝑵𝑻 𝑹𝑬𝑫𝑬𝑲𝑨𝑰</span></li>
+            <li>11. <span class="highlight">𝑺𝑯𝑬𝑳𝑩𝒀</span></li>
+            <li>12. <span class="highlight">𝑨𝑮𝑹𝑬𝑺𝑻𝑬</span></li>
+            <li>13. <span class="highlight">𝑩𝑰𝑮𝑫𝑬𝑨𝑳 ×2</span></li>
+            <li>14. <span class="highlight">𝐙𝐄𝐍𝐈𝐍</span></li>
+            <li>15. <span class="highlight">𝑮𝑶𝑷-3</span></li>
+            <li>16. <span class="highlight">𝐒𝐇𝐀𝐃𝐎𝐖 𝐎𝐅 𝐓𝐇𝐄 𝐌𝐎𝐎𝐍</span></li>
+            <li>17. <span class="highlight">𝐁𝐋𝐎𝐎𝐃 𝐋𝐈𝐍𝐄</span></li>
+            <li>18. <span class="highlight">𝐘𝐀𝐌𝐀𝐃𝐀</span></li>
+            <li>19. <span class="highlight">𝐇𝐎𝐒𝐓𝐄𝐋</span> 🆕</li>
+        </ul>
 
-<p>◈ 𝗘𝗻 𝘁𝗮𝗻𝘁 que famille numéro 𝟭 du réseau, notre suprématie est acquise.</p>
+        <h2>JOURNAL DOMINER</h2>
+        <ul>
+            <li>1. <span class="highlight">𝑭𝑼𝑹𝑰𝒁𝑨 𝑷𝑹𝑶</span></li>
+        </ul>
 
-<h2>CLAN DOMINER</h2>
-<ul>
-<li>1. 𝑺𝑶𝑴𝑨</li>
-<li>2. 𝑵𝑨𝑹𝑨</li>
-<li>3. 𝑴𝑷𝑲</li>
-<li>4. 𝑺𝑯𝑰𝑵𝑱𝑰</li>
-<li>5. 𝑺𝑯𝑨𝑫𝑶𝑾</li>
-<li>6. 𝑻𝑴𝑷</li>
-<li>7. 𝑮𝑯𝑶𝑺𝑻</li>
-<li>8. 𝑴𝑬𝑫𝑼𝒁𝑨</li>
-<li>9. 𝑫𝑨𝑹𝑲 𝑹𝑬𝑰𝑮𝑵</li>
-<li>10. 𝑱𝑼𝑮𝑬𝑴𝑬𝑵𝑻 𝑹𝑬𝑫𝑬𝑲𝑨𝑰</li>
-<li>11. 𝑺𝑯𝑬𝑳𝑩𝒀</li>
-<li>12. 𝑨𝑮𝑹𝑬𝑺𝑻𝑬</li>
-<li>13. 𝑩𝑰𝑮𝑫𝑬𝑨𝑳 ×2</li>
-<li>14. 𝐙𝐄𝐍𝐈𝐍</li>
-<li>15. 𝑮𝑶𝑷-3</li>
-<li>16. 𝐒𝐇𝐀𝐃𝐎𝐖 𝐎𝐅 𝐓𝐇𝐄 𝐌𝐎𝐎𝐍</li>
-<li>17. 𝐁𝐋𝐎𝐎𝐃 𝐋𝐈𝐍𝐄</li>
-<li>18. 𝐘𝐀𝐌𝐀𝐃𝐀</li>
-<li>19. 𝐇𝐎𝐒𝐓𝐄𝐋🆕</li>
-</ul>
+        <div class="divider">♛════════•✧•════════♛</div>
 
-<h2>JOURNAL DOMINER</h2>
-<ul>
-<li>1. 𝑭𝑼𝑹𝑰𝑶𝒁𝑨 𝑷𝑹𝑶</li>
-</ul>
+        <a href="https://whatsapp.com/channel/0029Vb7Y9vZBKfhrrUEr8s1Z" target="_blank" class="whatsapp-btn">
+            REJOINDRE LA CHAINE 
+        </a>
 
-<div class="divider">♛════•✧•════♛</div>
-<p>𝗩𝗜𝗩𝗘 𝗟𝗘𝗦 𝗦𝗔𝗗𝗘𝗨𝗦</p>
-<div class="divider">♛════•✧•════♛</div>
-
-<div class="button-container">
-  <a href="https://whatsapp.com/channel/0029Vb7Y9vZBKfhrrUEr8s1Z" target="_blank" class="whatsapp-btn">
-    Cliquez ici
-  </a>
-</div>
-
-<div class="signature">
-  <p>BY 𓆙Rⲁⳏⲏⲁⲉⳑ ՏⲀꓓⲈⳘՏ</p>
-</div>
-</div>
-
-<!-- Serpent fluide -->
-<div class="snake">
-  <div></div>
-  <div></div>
-  <div></div>
-</div>
+        <div class="footer">
+            BY 𓆙 Rⲁⳏⲏⲁⲉⳑ ՏⲀꓓⲈⳘՏ
+        </div>
+    </div>
 
 </body>
 </html>
+

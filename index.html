@@ -4,28 +4,38 @@
 <meta charset="UTF-8">
 <title>Sadeus Family</title>
 <style>
-   body {
+  body {
     margin: 0;
     font-family: 'Arial Black', sans-serif;
     background: url('https://i.imgur.com/tonimage.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #FFD700;
-    padding: 40px;
     line-height: 1.5;
   }
-    margin: 0;
-    font-family: 'Arial Black', sans-serif;
-    background: linear-gradient(135deg, #000000, #1a1a1a);
-    color: #FFD700;
-    padding: 40px;
-    line-height: 1.5;
+
+  /* Overlay sombre pour mieux lire le texte */
+  body::before {
+    content: "";
+    position: fixed;
+    top:0; left:0; width:100%; height:100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 0;
   }
+
+  /* Contenu principal */
+  .content {
+    position: relative;
+    z-index: 1;
+    padding: 40px;
+  }
+
   h1 {
     font-size: 4em;
     text-align: center;
     margin-bottom: 10px;
     animation: glow 2s infinite alternate;
   }
+
   h2 {
     font-size: 2em;
     margin-top: 30px;
@@ -33,30 +43,65 @@
     display: inline-block;
     padding-bottom: 5px;
   }
+
   p, li {
     color: white;
     font-size: 1.1em;
   }
+
   ul {
     list-style: none;
     padding-left: 0;
   }
+
   li {
     margin: 5px 0;
   }
+
   @keyframes glow {
     from { text-shadow: 0 0 10px #FFD700; }
     to { text-shadow: 0 0 30px #FFEA00, 0 0 50px #FFD700; }
   }
+
   .divider {
     text-align: center;
     color: #FFD700;
     margin: 30px 0;
   }
+
+  /* Bouton WhatsApp */
+  .whatsapp-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background: #25D366;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: transform 0.2s;
+    margin-top: 30px;
+  }
+
+  .whatsapp-btn:hover {
+    transform: scale(1.1);
+  }
+
+  /* Centrer le bouton et la signature */
+  .button-container, .signature {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .signature p {
+    font-size: 1.1em;
+    color: #FFD700;
+    margin-top: 10px;
+  }
 </style>
 </head>
 <body>
-
+<div class="content">
 <h1>◈ 𓆙 𝘽𝙞𝙚𝙣𝙫𝙚𝙣𝙪𝙚 au cœur de la famille Sadeus ☘️</h1>
 
 <p>◈ 𝗡𝗼𝘂𝘀 𝗻𝗲 𝗰𝗼𝗻𝗻𝗮𝗶𝘀𝘀𝗼𝗻𝘀 pas l'impossible car ceux qu'ils appellent impossible est possible chez les Sadeus.</p>
@@ -83,9 +128,9 @@
 <li>14. 𝐙𝐄𝐍𝐈𝐍</li>
 <li>15. 𝑮𝑶𝑷-3</li>
 <li>16. 𝐒𝐇𝐀𝐃𝐎𝐖 𝐎𝐅 𝐓𝐇𝐄 𝐌𝐎𝐎𝐍</li>
-<li>17. 𝐁𝐋𝐎𝐎𝐃 𝐋𝐈𝐍𝐄</li>
-<li>18. 𝐘𝐀𝐌𝐀𝐃𝐀</li>
-<li>19. 𝐇𝐎𝐒𝐓𝐄𝐋</li>
+<li>17.𝐁𝐋𝐎𝐎𝐃 𝐋𝐈𝐍𝐄</li>
+<li>18.𝐘𝐀𝐌𝐀𝐃𝐀</li>
+<li>19.𝐇𝐎𝐒𝐓𝐄𝐋🆕</li>
 </ul>
 
 <h2>JOURNAL DOMINER</h2>
@@ -97,5 +142,18 @@
 <p>𝗩𝗜𝗩𝗘 𝗟𝗘𝗦 𝗦𝗔𝗗𝗘𝗨𝗦</p>
 <div class="divider">♛════•✧•════♛</div>
 
+<!-- Bouton WhatsApp -->
+<div class="button-container">
+  <a href="https://whatsapp.com/channel/0029Vb7Y9vZBKfhrrUEr8s1Z" target="_blank" class="whatsapp-btn">
+    Cliquez ici
+  </a>
+</div>
+
+<!-- Signature BY -->
+<div class="signature">
+  <p>BY 𓆙🇷⃝ⲁⳏⲏⲁⲉⳑ ՏⲀꓓⲈⳘՏ</p>
+</div>
+
+</div>
 </body>
-  </html>
+</html>

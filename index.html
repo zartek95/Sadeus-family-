@@ -11,18 +11,9 @@
     background-size: cover;
     color: #FFD700;
     line-height: 1.5;
+    overflow: hidden;
   }
 
-  /* Overlay sombre pour mieux lire le texte */
-  body::before {
-    content: "";
-    position: fixed;
-    top:0; left:0; width:100%; height:100%;
-    background: rgba(0,0,0,0.6);
-    z-index: 0;
-  }
-
-  /* Contenu principal */
   .content {
     position: relative;
     z-index: 1;
@@ -44,32 +35,18 @@
     padding-bottom: 5px;
   }
 
-  p, li {
-    color: white;
-    font-size: 1.1em;
-  }
+  p, li { color: white; font-size: 1.1em; }
 
-  ul {
-    list-style: none;
-    padding-left: 0;
-  }
-
-  li {
-    margin: 5px 0;
-  }
+  ul { list-style: none; padding-left: 0; }
+  li { margin: 5px 0; }
 
   @keyframes glow {
     from { text-shadow: 0 0 10px #FFD700; }
     to { text-shadow: 0 0 30px #FFEA00, 0 0 50px #FFD700; }
   }
 
-  .divider {
-    text-align: center;
-    color: #FFD700;
-    margin: 30px 0;
-  }
+  .divider { text-align: center; color: #FFD700; margin: 30px 0; }
 
-  /* Bouton WhatsApp */
   .whatsapp-btn {
     display: inline-block;
     padding: 15px 30px;
@@ -83,24 +60,36 @@
     margin-top: 30px;
   }
 
-  .whatsapp-btn:hover {
-    transform: scale(1.1);
+  .whatsapp-btn:hover { transform: scale(1.1); }
+
+  .button-container, .signature { text-align: center; margin-top: 20px; }
+  .signature p { font-size: 1.1em; color: #FFD700; margin-top: 10px; }
+
+  .snake {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
   }
 
-  /* Centrer le bouton et la signature */
-  .button-container, .signature {
-    text-align: center;
-    margin-top: 20px;
+  .snake svg { width: 100%; height: 100%; }
+  .snake path {
+    fill: none;
+    stroke: #00FF00;
+    stroke-width: 6;
+    stroke-linecap: round;
+    stroke-dasharray: 20 20;
+    animation: moveSnake 4s linear infinite;
   }
 
-  .signature p {
-    font-size: 1.1em;
-    color: #FFD700;
-    margin-top: 10px;
-  }
+  @keyframes moveSnake { to { stroke-dashoffset: -40; } }
+
 </style>
 </head>
 <body>
+
 <div class="content">
 <h1>◈ 𓆙 𝘽𝙞𝙚𝙣𝙫𝙚𝙣𝙪𝙚 au cœur de la famille Sadeus ☘️</h1>
 
@@ -128,9 +117,9 @@
 <li>14. 𝐙𝐄𝐍𝐈𝐍</li>
 <li>15. 𝑮𝑶𝑷-3</li>
 <li>16. 𝐒𝐇𝐀𝐃𝐎𝐖 𝐎𝐅 𝐓𝐇𝐄 𝐌𝐎𝐎𝐍</li>
-<li>17.𝐁𝐋𝐎𝐎𝐃 𝐋𝐈𝐍𝐄</li>
-<li>18.𝐘𝐀𝐌𝐀𝐃𝐀</li>
-<li>19.𝐇𝐎𝐒𝐓𝐄𝐋🆕</li>
+<li>17. 𝐁𝐋𝐎𝐎𝐃 𝐋𝐈𝐍𝐄</li>
+<li>18. 𝐘𝐀𝐌𝐀𝐃𝐀</li>
+<li>19. 𝐇𝐎𝐒𝐓𝐄𝐋🆕</li>
 </ul>
 
 <h2>JOURNAL DOMINER</h2>
@@ -142,18 +131,23 @@
 <p>𝗩𝗜𝗩𝗘 𝗟𝗘𝗦 𝗦𝗔𝗗𝗘𝗨𝗦</p>
 <div class="divider">♛════•✧•════♛</div>
 
-<!-- Bouton WhatsApp -->
 <div class="button-container">
   <a href="https://whatsapp.com/channel/0029Vb7Y9vZBKfhrrUEr8s1Z" target="_blank" class="whatsapp-btn">
     Cliquez ici
   </a>
 </div>
 
-<!-- Signature BY -->
 <div class="signature">
-  <p>BY 𓆙🇷⃝ⲁⳏⲏⲁⲉⳑ ՏⲀꓓⲈⳘՏ</p>
+  <p>BY 𓆙Rⲁⳏⲏⲁⲉⳑ ՏⲀꓓⲈⳘՏ</p>
+</div>
 </div>
 
+<!-- Serpent vert -->
+<div class="snake">
+  <svg>
+    <path d="M10,10 h780 v580 h-780 z" />
+  </svg>
 </div>
+
 </body>
 </html>
